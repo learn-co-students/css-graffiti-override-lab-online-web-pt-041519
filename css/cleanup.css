@@ -24,8 +24,11 @@ body div#wall div.parent div:last-child div#tag-6 {
     display: none;
 }
 
-body div#wall div.parent div,#tag-7.slick {
+body div#wall div.parent div, #tag-7.slick { /* Why does this work? Does this provide more Specificity? */
     display: none;
-  }
+}
 
+html body div#wall div.parent div > #tag-7.slick { /* I know this has more specificity because I went a level higher by using the html tag but why does the above version work? */
+    display: none;
+}
 
