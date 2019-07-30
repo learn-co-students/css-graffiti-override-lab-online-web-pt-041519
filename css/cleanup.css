@@ -1,1 +1,38 @@
 /* write your override styles here */
+
+#wall .tag-1 {
+    display: none;
+}
+
+body #wall #tag-2 {
+    display: none;
+}
+
+body div#wall #tag-3.slick {
+    display: none;
+}
+
+div#wall #tag-4 {
+    display: none;
+}
+
+body div#wall .parent #tag-5.slick {
+    display: none;
+}
+
+body div#wall div.parent div:last-child div#tag-6 {
+    display: none;
+}
+
+/* Why does the below code work? Does it provide more Specificity than the original code: body div#wall div.parent div > #tag-7.slick? */
+
+/* body div#wall div.parent div, #tag-7.slick { 
+    display: none;
+}*/
+
+/* I know this has more specificity because I went a level higher by using the html tag but why does the above version work? _scratches head_ */
+
+html body div#wall div.parent div > #tag-7.slick { 
+    display: none;
+}
+
